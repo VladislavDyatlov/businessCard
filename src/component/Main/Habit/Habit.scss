@@ -1,0 +1,75 @@
+.habit {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 0.5px solid rgba(211, 211, 211, 0.232);
+    width: 100%;
+    height: auto;
+    &__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__block {
+        width: 550px;
+        height: 500px;
+        background-image: url(../../../images/Smile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    &__block1 {
+        max-width: 600px;
+        color: white;
+        letter-spacing: 0.1em;
+        p {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        small {
+            color: lightgray;
+        }
+        div {
+            display: flex;
+            align-items: center;
+            column-gap: 35px;
+            img {
+                margin-top: 20px;
+                border-radius: 15px;
+                width: 75px;
+                height: 75px;
+            }
+        }
+    }
+}
+
+@media(max-width: 1148px) {
+    .habit {
+        &__inner {
+            padding: 20px;
+            display: block;
+        }
+        &__block {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .habit {
+        &__block1 {
+            p {
+                font-size: 29px;
+            }
+            div {
+                column-gap: 25px;
+                img {
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
+    }
+}

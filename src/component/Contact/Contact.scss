@@ -1,0 +1,117 @@
+.contact {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    &__inner {
+        padding: 10px;
+        display: flex;
+        align-items: flex-start;
+        column-gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 600px;
+        border: 1px solid rgba(211, 211, 211, 0.311);
+        border-radius: 20px;
+    }
+    &__icon {
+        width: 450px;
+        height: 100%;
+        background-image: url(../../images/contact.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 20px;
+    }
+    &__myself {
+        padding: 10px;
+        color: white;
+        width: 52%;
+        p {
+            font-size: 34px;
+            font-weight: bold;
+        }
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        label {
+            margin-bottom: 5px;
+        }
+        input {
+            width: 80%;
+            height: 40px;
+            border-radius: 7px;
+            outline: none;
+            background-color: white;
+            border: 0;
+            margin-bottom: 20px;
+        }
+        input::placeholder {
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+    &__btn {
+        font-size: 12px;
+        color: lightgray;
+    }
+    &__btn>button {
+        width: 115px;
+        height: 37px;
+        border-radius: 6px;
+        border: linear-gradient( 0deg, #afaac8, #2c3bde);
+        outline: none;
+        background-color: rgb(57, 54, 224);
+        box-shadow: 0px 10px 15px 0px rgba(6, 7, 20, 1);
+        font-weight: 500;
+        font-size: 14px;
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    &__btn>button:hover {
+        transition: 0.3s;
+        opacity: 0.8;
+    }
+    &__alert {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        width: 80%;
+        height: 30px;
+        border-radius: 7px;
+        background-color: lightgray;
+        color: black;
+        border: 0;
+        margin-bottom: 20px;
+        opacity: 0;
+        transition: all 0.3s;
+        p {
+            font-size: 15px;
+        }
+        span {
+            cursor: pointer;
+        }
+    }
+    &__alert.active {
+        transition: all 0.3s;
+        opacity: 1;
+    }
+}
+
+@media(max-width: 723px) {
+    .contact {
+        padding: 10px;
+        &__inner {
+            display: block;
+        }
+        &__myself {
+            width: 100%;
+        }
+        &__icon {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.articleid {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: auto;
+    &__container {
+        display: flex;
+        align-items: center;
+        column-gap: 60px;
+        padding: 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: auto;
+        border: 1px solid rgba(211, 211, 211, 0.311);
+        border-radius: 20px;
+    }
+    &__width {
+        z-index: 1;
+        width: 480px;
+        height: 600px;
+    }
+    &__icon {
+        width: 100%;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 20px;
+    }
+    &__myself {
+        color: white;
+        width: 50%;
+        p {
+            font-size: 38px;
+            font-weight: bold;
+        }
+    }
+    &__text {
+        p {
+            margin-top: -20px;
+            margin-bottom: 35px;
+            line-height: 21px;
+            font-size: 17px;
+            font-weight: normal;
+            letter-spacing: 0.1rem;
+        }
+    }
+    &__btn>button {
+        width: 115px;
+        height: 37px;
+        border-radius: 6px;
+        border: linear-gradient( 0deg, #afaac8, #2c3bde);
+        outline: none;
+        background-color: rgb(57, 54, 224);
+        box-shadow: 0px 10px 15px 0px rgba(6, 7, 20, 1);
+        font-weight: 500;
+        font-size: 14px;
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    &__btn>button:hover {
+        transition: 0.3s;
+        opacity: 0.8;
+    }
+    &__block1 {
+        width: 450px;
+        height: 500px;
+    }
+}
+
+@media(max-width: 925px) {
+    .articleid {
+        &__container {
+            column-gap: 30px;
+        }
+        &__width {
+            width: 400px;
+        }
+        &__myself {
+            width: 100%;
+            p {
+                font-size: 25px;
+            }
+        }
+        &__text {
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .articleid {
+        &__container {
+            display: block;
+        }
+        &__width {
+            width: 100%;
+        }
+        &__icon {
+            height: 400px;
+        }
+        &__block1 {
+            height: 390px;
+        }
+        &__remove {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .articleid {
+        &__width {
+            width: 350px;
+        }
+        &__icon {
+            height: 350px;
+        }
+        &__block1 {
+            height: 350px;
+        }
+    }
+}

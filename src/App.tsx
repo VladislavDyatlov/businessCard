@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import { Main } from "./component/Main/Main";
+import { About } from "./component/About/About";
+import { Contact } from "./component/Contact/Contact";
+import { State } from "./component/State/State";
+import { Toaster } from 'react-hot-toast';
+import { ArticleID } from "./component/ArticleID/ArticleID";
+import { StateID } from "./component/StateID/StateID";
+import { State_ID } from "./component/State/State_ID/State_ID";
 
-function App() {
+function App() { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="index">
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/state" element={<State />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/article" element={<ArticleID />} />
+        <Route path="/mail/:id" element={<StateID />} />
+        <Route path="/state/:id" element={<State_ID />} />
+      </Routes>
+      <Toaster />
     </div>
   );
 }
